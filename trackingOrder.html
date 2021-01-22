@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/2e646d6873.js" crossorigin="anonymous"></script>
+
+	<link rel="shortcut icon" type="image/x-icon" href="./images/logo.png" />
+	<link rel="stylesheet" href="css/orderTracking.css">
+	<link rel="stylesheet" href="css/style-header.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/footer.css">
+
+	<title>Tracking Order</title>
+</head>
+
+<body>
+
+	<!----------------1st nav------------------------------------>
+	<div>
+		<div class="topnav" id="myTopnav" style="display: none;">
+			<ul>
+				<li><img src="images/app icon.jpg" style="float: left;"><a href="#home" class="active" style="font-size: 34px;padding:0;padding-top: 10px;border-right: 1px solid gray;padding-right: 8px;"> elmenus </a></li>
+			</ul>
+			<a href="Delivery-Page.html">Delivery</a>
+			<a href="DineOut-page.html">Dine Out</a>
+			<a href="giftmeals.html" class="gift"><i class="fas fa-gift"></i>Gift Meals</a>
+			<a href="#"><i class="fas fa-bell"></i>Notification</a>
+			<a href="myorderspast.html">My Orders</a>
+			<div class="dropdown2">
+				<button class="dropbtn" id="name_navbar"><i class="fas fa-user-friends"></i>
+					<!--<i class="fa fa-caret-down"></i>-->
+				</button>
+				<div class="dropdown-content2">
+					<a href="settings-Page.html">Account Settings</a>
+					<a href="#">Log Out</a>
+				</div>
+			</div>
+			<a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+			<a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;</a>
+
+		</div>
+		<!--------------------------------------------------->
+		<div class="topnav" id="myTopnav2">
+			<ul>
+				<li><img src="images/app icon.jpg" style="float: left;"><a href="#" class="active" style="font-size: 34px;padding:0;padding-top: 10px;border-right: 1px solid gray;padding-right: 8px;"> elmenus </a></li>
+			</ul>
+			<a href="Delivery-Page.html">Delivery</a>
+			<a href="DineOut-page.html">Dine Out</a>
+			<a href="giftmeals.html" class="gift2"><i class="fas fa-gift"></i>Gift Meals</a>
+			<a href="myorderspast.html" class="cart mr-5" style="float: right;"><i style="font-size: 24px; " class="fas fa-shopping-cart"></i></a>
+			<a href="javascript:void(1);" style="font-size:25px;" class="icon" onclick="myFunction2()">&#9776;</a>
+
+		</div>
+	</div>
+
+	<!--------------- 2nd nav ---------------------->
+	<nav class=" navbar navbar-light bg-light">
+		<div class="input-container">
+			<input class="input-field" type="text" placeholder="Find a Restaurant">
+			<i class="fas fa-search"></i>
+		</div>
+		<span style="font-size: 24px;"><i class="fas fa-biking" style="color: #E5533A;"></i>Deliver</span>
+		<span style="margin-right: 100px;color: #E5533A; font-size: 26px;"><strong> St.Mohamed Tawfik</strong></span>
+		<button style="    padding-top: 0px;
+    padding-bottom: 0px; font-size: 20px;border:1px solid #E5533A;background-color: none;color: #E5533A; border-radius: 8px;">Change</button>
+	</nav>
+	<!----------------------- Start Modal----------------------------->
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title"><img class="img-fluid rounded-circle mx-auto d-block" style="width: 19%;float: left;" src="images/app icon.jpg" alt="app icon">elmenus
+					</h2>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div role="tabpanel">
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" role="tablist" style="margin-left: 15px;">
+							<li role="presentation" id="login" class="active"><a href="#uploadTab" aria-controls="uploadTab" role="tab" data-toggle="tab" style="margin-right: 25px;font-size: 22px; font-weight: bold;">Login</a>
+
+							</li>
+							<li role="presentation" id="createaccount"><a style="font-size: 20px; font-weight: bold;" href="#browseTab" aria-controls="browseTab" role="tab" data-toggle="tab">Create Account</a>
+
+							</li>
+						</ul>
+						<br>
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="uploadTab">
+								<div class="form-group">
+									<input type="text" class="form-control" id="email" style="font-size: 15px;height: 40px !important;" placeholder="email" name="email">
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" id="pwd" style="font-size: 15px; height: 40px !important;" placeholder="password" name="pswd">
+								</div>
+								<button type="button" id="modal_login" class="btn btn-block" style="background-color: #E5533A; color: white; font-size: 23px;">Login</button>
+								<button type="button" class="btn btn-block" style="background-color: #4267B2; color: white; font-size: 22px;">Continue With FaceBook</button>
+								<span style="font-size: 15px; margin-top: 10%; margin-left: 30%; color: #E5533A;">forget password?</span>
+							</div>
+							<!--------------------------------------------->
+							<div role="tabpanel" class="tab-pane" id="browseTab">
+								<div class="form-group">
+									<input type="text" class="form-control" id="username" style="font-size: 15px; height: 40px !important;" placeholder="name" name="email">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" id="username2" style="font-size: 15px; height: 40px !important;" placeholder="email" name="email">
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" id="pwd2" style="font-size: 15px; height: 40px !important;" placeholder="password" name="pswd">
+								</div>
+								<button type="button" class="btn btn-block" style="background-color: #E5533A; color: white; font-size: 22px;">Create Account</button>
+								<span style="font-size: 13px;text-align: center;color: rgb(207, 188, 188); ">By creating an account, you agree to our Terms</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!----------------End Modal-------------------------------->
+	<script src="js/pages.js"></script>
+
+
+	<div class="container" id="orderContainer">
+		<article class="card">
+			<header class="card-header"> My Orders / Tracking </header>
+			<div class="card-body">
+				<h6>Order ID: OD45345345435</h6>
+				<article class="card">
+					<div class="card-body row">
+						<div class="col"> <strong>Estimated Delivery time:</strong> <br>7:12 PM </div>
+						<div class="col"> <strong>Shipping BY:</strong> <br> Ali, | <i class="fa fa-phone"></i> +201228802927 </div>
+						<div class="col"> <strong>Status:</strong> <br> Picked by the delivery man </div>
+					</div>
+				</article>
+				<div class="track">
+					<div class="step active"> <span class="icon"> <i class="fa fa-check"></i> </span> <span class="text">Order placed</span> </div>
+					<div class="step active"> <span class="icon"> <i class="fa fa-user"></i> </span> <span class="text"> Picked by delivery</span> </div>
+					<div class="step"> <span class="icon"> <i class="fa fa-motorcycle"></i> </span> <span class="text"> On the way </span> </div>
+					<div class="step"> <span class="icon"> <i class="fa fa-people-carry"></i> </span> <span class="text">Ready for pickup</span> </div>
+				</div>
+				<hr>
+
+				<div class="container-fluid my-5 d-flex justify-content-center">
+					<div class="card card-1">
+						<div class="card-header bg-white">
+							<div class="media flex-sm-row flex-column-reverse justify-content-between ">
+								<div class="col my-auto">
+									<h4 class="mb-0">Your order from <span class="change-color">KFC</span> details:</h4>
+								</div>
+								<div class="col-auto text-center my-auto pl-0 pt-sm-4"> <img class="img-fluid my-auto align-items-center mb-0 pt-3" src="./images/KFC-logo.png" width="115" height="115">
+									<p class="mb-4 pt-0 Glasses">4 sec(s) ago 6:12 PM</p>
+								</div>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="row justify-content-between mb-3">
+								<div class="col-auto">
+									<h6 class="color-1 mb-0 change-color">Receipt</h6>
+								</div>
+							</div>
+							<div class="row mt-4">
+								<div class="col">
+									<div class="card card-2">
+										<div class="card-body">
+											<div class="media">
+												<div class="sq align-self-center "> <img class="img-fluid my-auto align-self-center mr-2 mr-md-4 pl-0 p-0 m-0" src="./images/kfc-order1.png" width="135" height="135" /> </div>
+												<div class="media-body my-auto text-right">
+													<div class="row my-auto flex-column flex-md-row">
+														<div class="col my-auto">
+															<h5 class="mb-0">Mighty Zinger</h5>
+														</div>
+														<div class="col-auto my-auto">Sandwich + Rizo + Small Coleslaw + Pepsi Drink Can</div>
+														<div class="col my-auto">Qty : 1</div>
+														<div class="col my-auto">
+															<h6 class="mb-0">85 EGP</h6>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row mt-4">
+								<div class="col">
+									<div class="card card-2">
+										<div class="card-body">
+											<div class="media">
+												<div class="sq align-self-center "> <img class="img-fluid my-auto align-self-center mr-2 mr-md-4 pl-0 p-0 m-0" src="./images/kfc-order2.png" width="135" height="135" /> </div>
+												<div class="media-body my-auto text-right">
+													<div class="row my-auto flex-column flex-md-row">
+														<div class="col my-auto">
+															<h5 class="mb-0">Shrimp Box</h5>
+														</div>
+														<div class="col-auto my-auto">7 Pcs Shrimps + Coleslaw + Fries + Rice + 2 Sauces + Drink</div>
+														<div class="col my-auto">Qty : 1</div>
+														<div class="col my-auto">
+															<h6 class="mb-0">100 EGP</h6>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row mt-4">
+								<div class="col">
+									<div class="card card-2">
+										<div class="card-body">
+											<div class="media">
+												<div class="sq align-self-center "> <img class="img-fluid my-auto align-self-center mr-2 mr-md-4 pl-0 p-0 m-0" src="./images/kfc-order3.png" width="135" height="135" /> </div>
+												<div class="media-body my-auto text-right">
+													<div class="row my-auto flex-column flex-md-row">
+														<div class="col my-auto">
+															<h5 class="mb-0">Grand Feast Bucket</h5>
+														</div>
+														<div class="col-auto my-auto">12 Pcs of chicken + Fries + Large Coleslaw + 1 Ltr Drink</div>
+														<div class="col my-auto">Qty : 1</div>
+														<div class="col my-auto">
+															<h6 class="mb-0">253 EGP</h6>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row mt-4">
+								<div class="col">
+									<div class="row justify-content-between">
+										<div class="col-auto">
+											<p class="mb-1 text-dark"><b>Order Details</b></p>
+										</div>
+										<div class="flex-sm-col text-right col">
+											<p class="mb-1"><b>Total</b></p>
+										</div>
+										<div class="flex-sm-col col-auto">
+											<p class="mb-1">438.00 EGP</p>
+										</div>
+									</div>
+									<div class="row justify-content-between">
+										<div class="flex-sm-col text-right col">
+											<p class="mb-1"> <b>Discount</b></p>
+										</div>
+										<div class="flex-sm-col col-auto">
+											<p class="mb-1">50.00 EGP</p>
+										</div>
+									</div>
+									<div class="row justify-content-between">
+										<div class="flex-sm-col text-right col">
+											<p class="mb-1"><b>VAT 14%</b></p>
+										</div>
+										<div class="flex-sm-col col-auto">
+											<p class="mb-1">61.50 EGP</p>
+										</div>
+									</div>
+									<div class="row justify-content-between">
+										<div class="flex-sm-col text-right col">
+											<p class="mb-1"><b>Delivery Fees</b></p>
+										</div>
+										<div class="flex-sm-col col-auto">
+											<p class="mb-1">Free</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row invoice" style="float: left;">
+								<div class="col">
+									<p class="mb-1"> Invoice Number : 788152</p>
+									<p class="mb-1">Invoice Date : 28 Dec, 2020</p>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="jumbotron-fluid">
+								<div class="row justify-content-between ">
+									<div class="col-auto my-auto ">
+										<h4 class="mb-0 font-weight-bold">TOTAL PAID</h4>
+									</div>
+									<div class="col-auto my-auto ml-auto">
+										<h3>326.50 EGP</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="btn btn-warning" style="float: left;" data-abc="true">Back to restaurants</a>
+				<button href="#" class="btn btn-warning" onclick="document.getElementById('id01').style.display='block'" style="float: right;" data-abc="true">Cancel my order</button>
+
+				<div id="id01" class="modal">
+					<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+					<form class="modal-content" action="/action_page.php">
+						<div class="cancel-container">
+							<h1>Cancel my order</h1>
+							<p>Are you sure you want to cancel your order?</p>
+
+							<div class="clearfix">
+								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Dismiss</button>
+								<button type="button" id="cancel-btn" class="deletebtn">Cancel</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</article>
+	</div>
+
+
+
+	<!-- footer -->
+	<footer class="footer-main">
+		<!-- container footer div -->
+		<div class="container">
+
+			<!-- first footer row -->
+			<div class="row">
+
+				<!-- Images col -->
+				<div class="images-col col-sm-12 col-md-2 col-lg-2 footer-images pl-0">
+					<div class="logo-img clickable-item">
+						<a href="/">
+							<img src="images/logo.svg" draggable="false" alt="elmenus" style="margin-bottom: 20px; width: 125px;height: 29.5px;">
+						</a>
+					</div>
+					<a class="get-app" rel="noopener" target="_blank" href="https://app.adjust.com/vquym1x">
+						<img src="images/get-gplay.png" alt="Get Android app on Google Play" style="width: 125px;height: 43.5px;">
+					</a>
+					<a class="get-app" rel="noopener" target="_blank" href="https://app.adjust.com/vquym1x">
+						<img src="images/get-appstore.png" alt="Get iPhone app on App Store" style="width: 125px;height: 43.5px;">
+					</a>
+				</div>
+				<!-- cities col -->
+				<div class="cities-col col-sm-12 col-md-3 col-lg-3">
+					<h4> Cities
+
+					</h4>
+					<ul class="footer-cities-list">
+
+						<li>
+							<a @click='setUserLocationCookies("35c4a83f-2224-11e8-924e-0242ac110011",null, null)' href="/ain-sokhna/delivery">
+
+								Ain Sokhna
+							</a>
+
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("93a5d56b-a3a6-11e8-b2ca-0242ac110002",null, null)' href="/al-fayoum/delivery">
+
+								Al Fayoum
+							</a>
+
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35c3ab7f-2224-11e8-924e-0242ac110011",null, null)' href="/alexandria/delivery">
+
+								Alexandria
+							</a>
+
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("e7db58d2-5b94-11e9-b729-0a58646003b7",null, null)' href="/asyut/delivery">
+
+								Asyut
+							</a>
+
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("e28dc0b1-3297-11e9-bd51-0a586460030a",null, null)' href="/benha/delivery">
+
+								Benha
+							</a>
+
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("e29984a0-3297-11e9-bd51-0a586460030a",null, null)' href="/beni-suef/delivery">
+
+								Beni Suef
+							</a>
+
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011",null, null)' href="/cairo/delivery">
+
+								Cairo
+							</a>
+
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("93a5d4ab-a3a6-11e8-b2ca-0242ac110002",null, null)' href="/dahab/delivery">
+
+								Dahab
+							</a>
+
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("e29d567e-3297-11e9-bd51-0a586460030a",null, null)' href="/damanhour/delivery">
+
+								Damanhour
+							</a>
+
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("e2bf63da-3297-11e9-bd51-0a586460030a",null, null)' href="/damietta/delivery">
+
+								Damietta
+							</a>
+
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35c3afc1-2224-11e8-924e-0242ac110011",null, null)' href="/el-gouna/delivery">
+
+								El Gouna
+							</a>
+
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35c49f5c-2224-11e8-924e-0242ac110011",null, null)' href="/el-mansoura/delivery">
+
+								El Mansoura
+							</a>
+
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35c4a628-2224-11e8-924e-0242ac110011",null, null)' href="/hurghada/delivery">
+
+								Hurghada
+							</a>
+
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("e2a3dfc5-3297-11e9-bd51-0a586460030a",null, null)' href="/ismailia/delivery">
+
+								Ismailia
+							</a>
+
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("e7c6bc68-5b94-11e9-b729-0a58646003b7",null, null)' href="/kafr-el-sheikh/delivery">
+
+								Kafr El Sheikh
+							</a>
+
+						</li>
+
+					</ul>
+				</div>
+
+				<!-- Areas col -->
+				<div class="areas-col col-sm-12 col-md-4 col-lg-4">
+					<h4>Areas </h4>
+					<ul class="footer-cities-list">
+
+						<li>
+							<a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","3749204e-2224-11e8-924e-0242ac110011", null)' href="/cairo/delivery/6th-of-october">
+								6th of October
+							</a>
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","3749633f-2224-11e8-924e-0242ac110011", null)' href="/cairo/delivery/abbassiya">
+								Abbassiya
+							</a>
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37496602-2224-11e8-924e-0242ac110011", null)' href="/cairo/delivery/agouza">
+								Agouza
+							</a>
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37497c45-2224-11e8-924e-0242ac110011", null)' href="/cairo/delivery/al-katameya">
+								Al Katameya
+							</a>
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37495561-2224-11e8-924e-0242ac110011", null)' href="/cairo/delivery/al-mokatam">
+								Al Mokatam
+							</a>
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37492e9c-2224-11e8-924e-0242ac110011", null)' href="/cairo/delivery/al-rehab-city">
+								Al Rehab City
+							</a>
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","374932a6-2224-11e8-924e-0242ac110011", null)' href="/cairo/delivery/alexandria-desert-road">
+								Alexandria Desert Road
+							</a>
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","374938a7-2224-11e8-924e-0242ac110011", null)' href="/cairo/delivery/dokki">
+								Dokki
+							</a>
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37493b8a-2224-11e8-924e-0242ac110011", null)' href="/cairo/delivery/downtown">
+								Downtown
+							</a>
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37496eb2-2224-11e8-924e-0242ac110011", null)' href="/cairo/delivery/el-shorouk-city">
+								El Shorouk City
+							</a>
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37497177-2224-11e8-924e-0242ac110011", null)' href="/cairo/delivery/faisal">
+								Faisal
+							</a>
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37493e4b-2224-11e8-924e-0242ac110011", null)' href="/cairo/delivery/garden-city">
+								Garden City
+							</a>
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37494108-2224-11e8-924e-0242ac110011", null)' href="/cairo/delivery/giza">
+								Giza
+							</a>
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","374be5be-2224-11e8-924e-0242ac110011", null)' href="/cairo/delivery/hadayek-el-ahram">
+								Hadayek El Ahram
+							</a>
+						</li>
+
+						<li>
+							<a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37497425-2224-11e8-924e-0242ac110011", null)' href="/cairo/delivery/hadayek-el-kobba">
+								Hadayek El Kobba
+							</a>
+						</li>
+
+					</ul>
+				</div>
+
+				<!-- Dishes col -->
+				<div class="dishes-col col-sm-12 col-md-3 col-lg-3">
+					<h4>Dishes</h4>
+
+					<ul class="footer-cities-list">
+
+						<li>
+							<a href="/cairo/delivery/maadi/dishes-grilled-chicken">
+								Grilled Chicken
+							</a>
+						</li>
+
+						<li>
+							<a href="/cairo/delivery/maadi/dishes-shawerma">
+								Shawerma
+							</a>
+						</li>
+
+						<li>
+							<a href="/cairo/delivery/maadi/dishes-burgers">
+								Burgers
+							</a>
+						</li>
+
+						<li>
+							<a href="/cairo/delivery/maadi/dishes-pizza">
+								Pizza
+							</a>
+						</li>
+
+						<li>
+							<a href="/cairo/delivery/maadi/dishes-fried-chicken">
+								Fried Chicken
+							</a>
+						</li>
+
+						<li>
+							<a href="/cairo/delivery/maadi/dishes-pasta">
+								Pasta
+							</a>
+						</li>
+
+						<li>
+							<a href="/cairo/delivery/maadi/dishes-grills">
+								Grills
+							</a>
+						</li>
+
+						<li>
+							<a href="/cairo/delivery/maadi/dishes-asian">
+								Asian
+							</a>
+						</li>
+
+						<li>
+							<a href="/cairo/delivery/maadi/dishes-healthy-food">
+								Healthy Food
+							</a>
+						</li>
+
+						<li>
+							<a href="/cairo/delivery/maadi/dishes-desserts">
+								Desserts
+							</a>
+						</li>
+
+						<li>
+							<a href="/cairo/delivery/maadi/dishes-breakfast">
+								Breakfast
+							</a>
+						</li>
+
+						<li>
+							<a href="/cairo/delivery/maadi/dishes-seafood">
+								Seafood
+							</a>
+						</li>
+
+						<li>
+							<a href="/cairo/delivery/maadi/dishes-sushi">
+								Sushi
+							</a>
+						</li>
+
+						<li>
+							<a href="/cairo/delivery/maadi/dishes-feteer">
+								Feteer
+							</a>
+						</li>
+
+						<li>
+							<a href="/cairo/delivery/maadi/dishes-koshary">
+								Koshary
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- second footer row -->
+		<div class="row mt-lg-4">
+			<!--				<i class="fab fa-facebook-square"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin"></i>
+-->
+			<div class="ft-social col-md-2 text-center">
+				<a href="#" class="ft-sc-icon">
+					<i class="ft-sc-icon fab fa-facebook-square"></i>
+				</a>
+				<a href="#" class="ft-sc-icon">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="#" class="ft-sc-icon">
+					<i class="fab fa-twitter"></i>
+				</a>
+				<a href="#" class="ft-sc-icon">
+					<i class="fab fa-linkedin"></i>
+				</a>
+
+			</div>
+			<div class="col-md-7 d-flex justify-content-between ">
+				<a href="#" class="ft-lnk ">
+					About us
+				</a>
+				<a href="#" class="ft-lnk">
+					Terms and Conditions
+				</a>
+				<a href="#" class="ft-lnk">
+					Privacy
+				</a>
+				<a href="#" class="ft-lnk">
+					Careers
+				</a>
+			</div>
+			<div class="col-md-3 text-center">
+				<p>© 2020 elmenus</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+	<script src="js/pages.js"></script>
+</body>
+
+</html>

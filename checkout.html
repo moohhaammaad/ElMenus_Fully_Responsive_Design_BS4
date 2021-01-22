@@ -1,0 +1,448 @@
+	<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<!--	Fonts-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap" rel="stylesheet">
+	<!--	Fonts-->
+	<!-- custom_styles_sheets-->
+	<link rel="stylesheet" href="css/checkout.css">
+	<link rel="shortcut icon" type="image/x-icon" href="./images/logo.png" />
+	<title>Order online Best Delivery Restaurant</title>
+	<!--import jQuery and bootsrap -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	<!--	bs_dropdown_search_script-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
+</head>
+
+<body>
+	<!--	header-->
+	<header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="logo col-sm-2 ml-5">
+					<a href="#"><img src="images/logo.svg"></a>
+				</div>
+				<div class="hdr-link col-sm-9 justify-content-center align-self-center">
+					<button id="exitCheckoutBtn" type="button" class="CheckoutExitBtn btn float-md-right">Exit Checkout <i class="ml-1 fas fa-arrow-right"></i></button>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--	end-header-->
+
+	<!--	CheckOut_section-->
+	<div class="gift-cards pl-0 mt-3">
+		<div class="container">
+			<div class="row text-center">
+				<!--				Checkout_form-->
+				<div class="gift-card-chckout col-md-7">
+					<div class="stepper-section">
+						<!--					checkout_title-->
+						<div class="row checkout-title">
+							<h3 class="mb-sm-2">Checkout</h3>
+						</div>
+						<div class="row mb-4">
+							<div class="col-md-12 mb-5 mb-md-0 pl-0">
+								<!--					checkout_steps-->
+								<div class="gift-steps mb-5 mt-5">
+									<!--		Stepper-->
+									<ul class="steps mb-4">
+										<li class="active-step">
+											<span class="step-val">
+												<span>1</span>
+											</span>
+											<div class="content">
+												<span class="step-title">
+													Delivery address
+												</span>
+											</div>
+										</li>
+										<li>
+											<span class="step-val">
+												<span>2</span>
+											</span>
+											<div class="content">
+												<span class="step-title">
+													Review
+												</span>
+											</div>
+										</li>
+									</ul>
+									<!--						end_Stepper-->
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<!--end_checkout_steps-->
+
+					<!--Checkout_form-->
+					<div class="gift-steps-cntnt">
+						<form class="needs-validation" novalidate>
+
+							<div class="form-row text-left">
+								<!--		  Name-->
+								<div class="col-sm-12 ">
+									<div class="form-group row mb-3">
+										<div class="col-sm-7 pl-0">
+											<label class="form-label" for="validationCustom04">Name*</label>
+											<input type="text" class="form-control mb-1" id="validationCustom03" placeholder="e.g Shady Gamal" value="Mohamed" required>
+											<div class="invalid-feedback">
+												Enter a valid name
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--		  end_Name-->
+							</div>
+
+							<section class="text-left">
+								<!--Address-->
+								<h4 class="form-title">Add New Address Details</h4>
+
+
+								<!--	  map-->
+								<div class="map mb-3">
+									<div class="row">
+										<!--Google map-->
+										<div id="map-container-google-1" class="z-depth-1-half map-container">
+											<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13813.850729271433!2d31.216463!3d30.0522694!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3cd98b6ceef3fd95!2sPolice%20Agouza%20Hospital!5e0!3m2!1sen!2seg!4v1609230657945!5m2!1sen!2seg" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+
+										<!--Google Maps-->
+									</div>
+								</div>
+								<!--	  end_map-->
+
+								<p class="form-info">
+									<span>
+										<img src="images/exclamation-circle.svg">
+									</span>
+									Please select your exact location on the map, so that captains can reach you easily
+								</p>
+
+								<p class="form-instructions">
+									<span class="font-weight-bold">City:</span> Cairo, <span class="font-weight-bold">Area:</span> Zamalek, <span class="font-weight-bold">Zone:</span> Zamalek
+								</p>
+
+								<!--Address_Info-->
+								<div class="form-group">
+									<div class="row">
+										<div class="col-md-9 pl-0">
+											<label class="form-label" for="validationCustom03">
+												Address Info*</label>
+											<input type="text" class="form-control" id="validationCustom03" placeholder="in front of Le Carnaval Hotel" required>
+											<div class="invalid-feedback">
+												Enter a valid address info
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="inputs-group">
+									<div class="row">
+										<!--Building_no-->
+										<div class="form-group col-md-3 pl-0">
+
+											<label class="form-label" for="validationCustom03">
+												Building no.*</label>
+											<input type="text" class="form-control" id="validationCustom03" placeholder="e.g. 4" required>
+											<div class="invalid-feedback">
+												Enter a valid building number
+											</div>
+
+
+										</div>
+										<!--Floor_no.-->
+										<div class="form-group col-md-3 pl-0">
+											<label class="form-label" for="validationCustom03">
+												Floor no.*</label>
+											<input type="text" class="form-control" id="validationCustom03" placeholder="e.g. 4" required>
+											<div class="invalid-feedback">
+												Enter a valid floor number
+											</div>
+										</div>
+										<!--Apart_no.-->
+										<div class="form-group col-md-3 pl-0">
+											<label class="form-label" for="validationCustom03">
+												Apart no.*</label>
+											<input type="text" class="form-control" id="validationCustom03" placeholder="e.g. 4" required>
+											<div class="invalid-feedback">
+												Enter a valid Apart number
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+								<!--Mob_Number-->
+								<div class="form-group">
+									<div class="row">
+										<div class="col-md-8 pl-0">
+											<label class="form-label" for="validationCustom03">
+												Mobile No.*</label>
+											<input type="text" class="form-control" id="validationCustom03" placeholder="eg. 01023456789" required>
+											<div class="invalid-feedback">
+												Enter a valid mobile number
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</section>
+
+
+							<!--toggler-->
+							<div class="form-group">
+								<div class="row text-left">
+									<div class="custom-control custom-switch">
+										<input type="checkbox" class="custom-control-input" id="toggleBtn">
+										<label class="custom-control-label" for="toggleBtn"></label>
+										<p class="toggler-title"> This is a Company Address </p>
+									</div>
+								</div>
+							</div>
+							<!--	  end_toggler-->
+
+
+							<!--							Company_section-->
+							<div class="company-name d-none">
+								<!--	  company_name-->
+								<div class="form-group">
+									<div class="row">
+										<div class="col-md-8 pl-0">
+											<input type="text" class="form-control" id="validationCustom03" placeholder="Company Name" required>
+											<div class="invalid-feedback">
+												Enter a valid company name
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--	  end_company_name-->
+							</div>
+							<!--                        end_Company_section-->
+
+							<div class="row pt-sm-3">
+								<div class="col-md-5 pl-0 pr-lg-1 pb-sm-4">
+									<button id="chckout-svAddress-btn" class="btn btn-primary btn btn-block" type="submit">Save Addres</button>
+								</div>
+								<div class="col-md-4 pl-0 pb-sm-3">
+									<button id="chckout-cancel-btn" class="btn btn-primary btn btn-block" type="button">Cancel</button>
+								</div>
+
+							</div>
+
+						</form>
+					</div>
+					<!--					end_Checkout_form-->
+
+				</div>
+				<!--				end_Checkout_form-->
+
+
+				<!--				Corporote_send_teams_gift_section_form-->
+				<div class="gift-card-chckout col-md-7 d-none">
+					<!--					gift_card_title-->
+					<h2 class="text-center mb-2">Elmenus Gift Cards</h2>
+					<p class="text-center mb-3">
+						<img src="images/exclamation-circle-line.svg">
+						<span class="gift-card-subtitle">
+							Would you like to send gift for your friends?
+							<a href="#">click here</a>
+						</span>
+					</p>
+					<!--					gift_card_steps-->
+					<div class="gift-steps d-md-flex justify-content-center mb-5 mt-5">
+						<!--						Stepper-->
+						<ul class="steps mb-4">
+							<li class="active-step">
+								<span class="step-val">
+									<span>1</span>
+								</span>
+								<div class="content">
+									<span class="step-title">
+										Gift Details
+									</span>
+								</div>
+							</li>
+							<li>
+								<span class="step-val">
+									<span>2</span>
+								</span>
+								<div class="content">
+									<span class="step-title">
+										Payment
+									</span>
+								</div>
+							</li>
+						</ul>
+						<!--						end_Stepper-->
+					</div>
+					<!--					end_gift_card_steps-->
+
+					<!--					gift_card_form-->
+					<div class="gift-steps-cntnt">
+						<form class="needs-validation" novalidate>
+
+							<div class="form-row text-left">
+								<!--		  Dropdown-->
+								<div class="col-sm-12">
+									<div class="form-group row mb-3 drp-dwn">
+										<div class="col-sm-6 pl-0">
+											<label for="validationCustom04">Gift value*</label>
+											<select class="form-control" id="validationCustom04" required>
+												<option selected disabled value=""></option>
+												<option>10</option>
+												<option>25</option>
+												<option>30</option>
+												<option>50</option>
+												<option>75</option>
+												<option>100</option>
+											</select>
+											<div class="invalid-feedback">
+												Please fill out Gift Value
+											</div>
+										</div>
+										<span for="colFormLabel" class="col-form-label ml-lg-5">EGP</span>
+
+									</div>
+								</div>
+								<!--		  end_Dropdown-->
+							</div>
+
+							<!--	  Promo_name-->
+							<div class="form-group mb-3">
+								<div class="row text-left">
+									<label for="validationCustom03">Promo Name*</label>
+									<input type="text" class="form-control mb-1" id="validationCustom03" placeholder="e.g VF-" required>
+									<p class="info mb-0"><span><img src="images/exclamation-circle-line.svg"></span> desired promo name.</p>
+									<div class="invalid-feedback">
+										Please fill out Promo name.
+									</div>
+								</div>
+							</div>
+							<!--	  end_Promo_name-->
+
+							<!--	  company_email-->
+							<div class="form-group">
+								<div class="row text-left">
+									<label for="validationCustom03">Company*</label>
+									<input type="text" class="form-control" id="validationCustom03" required>
+									<div class="invalid-feedback">
+										Please fill out Phone.
+									</div>
+								</div>
+							</div>
+							<!--	  end_company_email-->
+
+							<!--	  company_name-->
+							<div class="form-group">
+								<div class="row text-left">
+									<label for="validationCustom03">Your Phone*</label>
+									<input type="text" class="form-control" id="validationCustom03" required>
+									<div class="invalid-feedback">
+										Please fill out Phone.
+									</div>
+								</div>
+							</div>
+							<!--	  end_company_name-->
+
+							<!--	  phone_number-->
+							<div class="form-group">
+								<div class="row text-left">
+									<label for="validationCustom03">Your Phone*</label>
+									<input type="text" class="form-control" id="validationCustom03" required>
+									<div class="invalid-feedback">
+										Please fill out Phone.
+									</div>
+								</div>
+							</div>
+							<!--	  end_phone_number-->
+
+							<!--	  gift_rec_phone-->
+							<div class="form-group mb-4">
+								<div class="row text-left">
+									<label for="validationCustom03">Gift Receiver Phone Number(s)*</label>
+									<input type="text" class="form-control form-control-sm mb-1" id="validationCustom03" placeholder="01xxxxxxxxx, 01xxxxxxxxx" required>
+									<p class="info mb-0"><span><img src="images/exclamation-circle-line.svg"></span> You can enter muliple numbers phone numbers separated by comma</p>
+									<div class="invalid-feedback">
+										Please fill out phone numbers.
+									</div>
+								</div>
+							</div>
+							<!--	  end_gift_rec_phone-->
+							<div class="row">
+								<button id="gft-pymnt-btn" class="btn btn-primary btn-lg btn-block text-uppercase" type="submit">go to payment</button>
+							</div>
+
+						</form>
+					</div>
+					<!--					end_gift_card_form-->
+
+				</div>
+				<!--				end_Corporote_send_teams_gift_section_form-->
+
+
+
+
+				<!--				gift-right-img-->
+				<!--				<div class="right-sec col-md-4 ml-5 ">
+										<img src="images/promo.png" class="gift-img mt-5">
+					
+
+				</div>-->
+				<!--				end_gift-right-img-->
+
+			</div>
+		</div>
+	</div>
+	<!--	end-CheckOut_section-->
+
+	<!--footer-->
+
+	<!--footer-->
+
+	<script>
+		//disabling form submissions if there are invalid fields
+		(function() {
+			'use strict';
+			window.addEventListener('load', function() {
+				// Fetch all the forms we want to apply validation to
+				var forms = document.getElementsByClassName('needs-validation');
+				// Loop over forms and prevent submission
+				var validation = Array.prototype.filter.call(forms, function(form) {
+					form.addEventListener('submit', function(event) {
+						if (form.checkValidity() === false) {
+							event.preventDefault();
+							event.stopPropagation();
+						}
+						form.classList.add('was-validated');
+					}, false);
+				});
+			}, false);
+		})();
+
+		// display/hide company name section on toggle
+		$("#toggleBtn").click(
+			function() {
+				if (this.hasAttribute("checked")) {
+					$(this).removeAttr("checked");
+					$('.company-name').addClass("d-none");
+				} else {
+					$(this).attr("checked", "");
+					$('.company-name').removeClass("d-none");
+				}
+			}
+		);
+	</script>
+</body></html>

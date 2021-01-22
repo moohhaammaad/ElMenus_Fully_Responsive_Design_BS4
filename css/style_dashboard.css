@@ -1,0 +1,274 @@
+/************ Start Navbar ***************************************************/
+/*body
+{
+    font-family: 'Anton', sans-serif !important;
+}*/
+nav a img {
+    width: 15%;
+    float: left;
+    padding-top: 3px;
+  }
+.navbar
+{
+     
+    height: 62px !important;
+    padding-top: 0 !important;
+}
+.navbar-brand
+{
+    margin-bottom: 80px;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    color: #E5533A !important; 
+    font-size: 30px !important;
+font-weight: bold;
+}
+/************ End Navbar ***************************************************/
+
+/*********** start Left side *************************************/
+.container-fluid
+{
+margin-top: 4%;
+    background-color:   rgb(221, 219, 217);
+    
+}
+.right_side
+{
+    background-color: #E5533A;
+    width: 100%;
+    height: 900px;
+}
+.right_side img{
+    padding-top: 10px;
+    width: 90%;
+    height: 160px;
+}
+.right_side h3{
+    margin-top: 15px;
+    margin-left: 35px;
+    color: white;
+}
+.right_side ul{
+    list-style: none;
+    padding-left: 0;
+}
+.right_side ul li{
+margin-bottom: 18px;
+
+}
+.active
+{
+    border-bottom: 1px solid white;
+border-right: 1px solid white;
+box-shadow: 1px 1px 2px 1px white;
+}
+li:hover {
+    border-bottom: 1px solid white;
+border-right: 1px solid white;
+box-shadow: 1px 1px 2px 1px white;
+text-decoration: none;
+color: white;
+}
+.right_side a{
+    color: white;
+    font-size: 27px;
+}
+.right_side .fas
+{
+    margin-right: 5px;
+}
+/*********** End Left Side **************************************/
+
+/*********** Start right Side ******************************************************/
+
+.icons_container{
+    display: flex;
+}
+.icons_container div{
+    width: 22%;
+    border:1px solid white;
+    border-radius: 25%;
+    background-color: white;
+    margin-left: 20px;
+    height: 200px;
+}
+.dot {
+    height: 85px;
+    width: 85px;
+    background-color: rgb(26, 187, 26);
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 35%;
+   margin-top: 10%;
+}
+.icons_container .dot .fas
+{
+    margin-left: 29%;
+    margin-top: 30%;
+    font-size: 29px;
+    color: white;
+}
+.icons_container h2
+{
+   
+    margin-bottom: 0;
+}
+.icons_container .text
+{
+    font-size: 15px;
+}
+.icons_container h4 , .icons_container .text
+{
+    margin-left: 15%;
+    margin-top: 8%;
+    color: gray;
+}
+.sec_container div
+{
+height: 250px;
+}
+@media(max-width:575px)
+{
+    .icons_container{
+        flex-direction: column;
+    }
+    .icons_container div
+    {
+        width: 65%;
+        margin:auto;
+        margin-bottom: 20px;
+        height: 250px;
+    }
+    .sec_container div 
+    {
+        width: 65% !important;
+    }
+    .container-fluid
+    {
+        margin-top: 15%;
+    }
+    .right_side
+    {
+        margin-top: 10%;
+
+    }
+    .right_side img
+    {
+        width: 50%;
+        height:200px
+
+    }
+    .right_side img  
+    {
+        margin-left: 25%;
+        
+    }
+    .right_side h3
+    {
+        margin-left: 33%;
+    }
+}
+
+
+@media(max-width:850px)
+{
+    .icons_container{
+        flex-direction: column;
+    }
+    .icons_container div
+    {
+        width: 85% !important;
+        margin:auto;
+        margin-bottom: 20px;
+        height: 250px;
+    }
+    .sec_container div 
+    {
+        width: 85% !important;
+    }
+     .container-fluid
+     {
+         margin-top: 10%;
+     }
+}
+@media(max-width:1000px)
+{
+.icons_container{
+    flex-wrap: wrap;
+}
+.icons_container div{
+    width:45% ;
+    margin-bottom: 30px;
+}
+}
+@media(max-width:1150px)
+{
+    .container-fluid
+    {
+        margin-top: 6%;
+    }
+}
+
+/*/////////////////////////////////*/
+svg
+{
+    position: relative;
+    width: 100%;
+    height: 150px;
+}
+ svg circle
+{
+    width: 200px;
+    height: 200px;
+    fill:none;
+    stroke-width: 10;
+    stroke: black;
+    transform: translate(5px,5px);
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+}
+svg text{
+    font-size: 25px;
+    font-weight: bold;
+}
+svg .c1
+{
+    stroke-dashoffset: 0;
+    stroke: #ddd7d7;}
+svg .c2
+ {
+    stroke-dasharray: 170;
+    stroke: #d31414;
+}
+ svg .c3
+{
+    stroke-dashoffset: 0;
+    stroke: #ddd7d7;
+}
+ svg .c4
+{
+    stroke-dasharray: 135;
+    stroke: #14d3d3;
+}
+ svg .c5
+{
+    stroke-dashoffset: 0;
+    stroke: #ddd7d7;}
+ svg .c6
+{
+    stroke-dasharray: 160;
+    stroke: #F59522;
+}
+ svg .c7
+{
+    stroke-dashoffset: 0;
+    stroke: #ddd7d7;
+}
+ svg .c8
+{
+    stroke-dasharray: 120;
+    stroke: #6c22f5;
+}
+
+/*********** End right Side ******************************************************/

@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> McDonald's, 6th of October, Cairo| Restaurant Menu | elmenus | 39 El Hosary Square </title>
+  <link rel="icon" href="images/logo sm.PNG">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css files -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/resturant-style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+  <!--navbar  -->
+  <nav class=" navbar navbar-expand-md navbar-light" style="padding-bottom: 0px;padding-top: 0px;">
+    <a href="#" class="navbar-brand" style="border-right: 1px solid rgb(177, 170, 170); width: 110px;">
+      <img class="img-fluid rounded-circle mx-auto d-block" src="images/app icon.jpg" alt="app icon">elmenus</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav">
+        <a href="#" class="nav-item nav-link active_navbar">Delivery</a>
+        <a href="#" class="nav-item nav-link">Dine out</a>
+        <a href="#" class="nav-item nav-link" style="width: 100px;"><i class="fas fa-gift"></i>Gift Meals</a>
+      </div>
+      <div class="navbar-nav ml-auto">
+        <div id="secondnav" class=" sec_nav" style="display: none;">
+          <a href="#" class="nav-item nav-link" style="width: 100px;"><i class="fas fa-bell"></i>Notification</a>
+          <a href="#" class="nav-item nav-link" style="width: 80px;">My Orders</a>
+          <a href="#" id="name_navbar" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown"
+            style="border-right: 1px solid rgb(177, 170, 170); border-left: 1px solid rgb(177, 170, 170)"><i
+              class="fas fa-user-friends"></i></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="settings-Page.html">Account Settings</a>
+            <a class="dropdown-item" href="#">LogOut</a>
+          </div>
+        </div>
+
+        <div id="btn_nav">
+          <button type="button" data-toggle="modal" data-target="#exampleModalCenter" class="btn"
+            id="btn_login">Login</button>
+          <button type="button" class="btn" id="btn_signup">Sign up</button>
+        </div>
+        <a href="#" class=" nav-link"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+      <!--------------------->
+    </div>
+  </nav>
+  <!--------------- 2nd nav ---------------------->
+  <nav class=" navbar navbar-light bg-light">
+    <div class="input-container">
+      <input class="input-field" type="text" placeholder="Find a Restaurant">
+      <i class="fas fa-search"></i>
+    </div>
+    <span><i class="fas fa-biking" style="color: #E5533A;"></i>Deliver</span>
+    <span style="margin-right: 100px;color: #E5533A;"><strong>6 October city</strong></span>
+    <button
+      style="width: 50px; height: 25px; font-size: 8pt;border:1px solid #E5533A;background-color: none;color: #E5533A; border-radius: 8px;">Change</button>
+  </nav>
+  <!----------------------- Start Modal----------------------------->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title"><img class="img-fluid rounded-circle mx-auto d-block" style="width: 15%;float: left;"
+              src="images/app icon.jpg" alt="app icon">elmenus
+          </h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div role="tabpanel">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist" style="margin-left: 15px;">
+              <li role="presentation" id="login" class="active"><a href="#uploadTab" aria-controls="uploadTab"
+                  role="tab" data-toggle="tab" style="margin-right: 25px;">Login</a>
+
+              </li>
+              <li role="presentation" id="createaccount"><a href="#browseTab" aria-controls="browseTab" role="tab"
+                  data-toggle="tab">Create Account</a>
+
+              </li>
+            </ul>
+            <br>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="uploadTab">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="email" style="font-size: 9pt;" placeholder="email"
+                    name="email">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="pwd" style="font-size: 9pt;" placeholder="password"
+                    name="pswd">
+                </div>
+                <button type="button" id="modal_login" class="btn btn-block"
+                  style="background-color: #E5533A; color: white; font-size: 8pt;">Login</button>
+                <button type="button" class="btn btn-block"
+                  style="background-color: #4267B2; color: white; font-size: 8pt;">Continue With FaceBook</button>
+                <span style="font-size: 4pt; margin-left: 30%; color: #E5533A;">forget password?</span>
+              </div>
+              <!--------------------------------------------->
+              <div role="tabpanel" class="tab-pane" id="browseTab">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="username" style="font-size: 9pt;" placeholder="name"
+                    name="email">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="username2" style="font-size: 9pt;" placeholder="email"
+                    name="email">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="pwd2" style="font-size: 9pt;" placeholder="password"
+                    name="pswd">
+                </div>
+                <button type="button" class="btn btn-block"
+                  style="background-color: #E5533A; color: white; font-size: 8pt;">Create Account</button>
+                <span style="font-size: 2pt;text-align: center;color: rgb(207, 188, 188); ">By creating an account, you
+                  agree to our Terms</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!----------------End Modal-------------------------------->
+  </div>
+  <!--end of navbar  -->
+  <div class="container-fluid">
+    <!-- cover image -->
+    <div class="row">
+      <div class="col-md-12  px-0">
+        <div class="cover-img"></div>
+      </div>
+    </div>
+    <!-- resturant name/info -->
+    <div class="row mx-4 cove-logo-content">
+      <div class="col-md-8 px-4">
+        <div class="cover-logo">
+          <img src="images/mc logo.jpg" class="img-fluid" alt="resturant-logo">
+          <div class="rest-info pt-2">
+            <h2 class="rest-name">McDonald's <span>order online</span></h2>
+            <h5 class="rest-type">fast food <span class="stars">
+                <svg data-v-21f5376e="" data-v-34cbeed1="" height="14" width="14" viewBox="0 0 14 14"
+                  class="vue-star-rating-star" step="10">
+                  <linearGradient data-v-21f5376e="" id="eelzk" x1="0" x2="100%" y1="0" y2="0">
+                    <stop data-v-21f5376e="" offset="100%" stop-color="#faad1d"></stop>
+                    <stop data-v-21f5376e="" offset="100%" stop-color="#d8d8d8"></stop>
+                  </linearGradient>
+                  <filter data-v-21f5376e="" id="ytfl3" height="130%" width="130%" filterUnits="userSpaceOnUse">
+                    <feGaussianBlur data-v-21f5376e="" stdDeviation="0" result="coloredBlur"></feGaussianBlur>
+                    <feMerge data-v-21f5376e="">
+                      <feMergeNode data-v-21f5376e="" in="coloredBlur"></feMergeNode>
+                      <feMergeNode data-v-21f5376e="" in="SourceGraphic"></feMergeNode>
+                    </feMerge>
+                  </filter>
+                  <polygon data-v-21f5376e=""
+                    points="6.363636363636363,0.7070707070707071,2.121212121212121,14,12.727272727272727,5.515151515151515,0,5.515151515151515,10.606060606060606,14"
+                    fill="url(#eelzk)" stroke="#fff" filter="url(#ytfl3)"></polygon>
+                  <polygon data-v-21f5376e=""
+                    points="6.363636363636363,0.7070707070707071,2.121212121212121,14,12.727272727272727,5.515151515151515,0,5.515151515151515,10.606060606060606,14"
+                    fill="url(#eelzk)" stroke="#999" stroke-width="0" stroke-linejoin="miter"></polygon>
+                  <polygon data-v-21f5376e=""
+                    points="6.363636363636363,0.7070707070707071,2.121212121212121,14,12.727272727272727,5.515151515151515,0,5.515151515151515,10.606060606060606,14"
+                    fill="url(#eelzk)"></polygon>
+                </svg>
+                <svg data-v-21f5376e="" data-v-34cbeed1="" height="14" width="14" viewBox="0 0 14 14"
+                  class="vue-star-rating-star" step="10">
+                  <linearGradient data-v-21f5376e="" id="eelzk" x1="0" x2="100%" y1="0" y2="0">
+                    <stop data-v-21f5376e="" offset="100%" stop-color="#faad1d"></stop>
+                    <stop data-v-21f5376e="" offset="100%" stop-color="#d8d8d8"></stop>
+                  </linearGradient>
+                  <filter data-v-21f5376e="" id="ytfl3" height="130%" width="130%" filterUnits="userSpaceOnUse">
+                    <feGaussianBlur data-v-21f5376e="" stdDeviation="0" result="coloredBlur"></feGaussianBlur>
+                    <feMerge data-v-21f5376e="">
+                      <feMergeNode data-v-21f5376e="" in="coloredBlur"></feMergeNode>
+                      <feMergeNode data-v-21f5376e="" in="SourceGraphic"></feMergeNode>
+                    </feMerge>
+                  </filter>
+                  <polygon data-v-21f5376e=""
+                    points="6.363636363636363,0.7070707070707071,2.121212121212121,14,12.727272727272727,5.515151515151515,0,5.515151515151515,10.606060606060606,14"
+                    fill="url(#eelzk)" stroke="#fff" filter="url(#ytfl3)"></polygon>
+                  <polygon data-v-21f5376e=""
+                    points="6.363636363636363,0.7070707070707071,2.121212121212121,14,12.727272727272727,5.515151515151515,0,5.515151515151515,10.606060606060606,14"
+                    fill="url(#eelzk)" stroke="#999" stroke-width="0" stroke-linejoin="miter"></polygon>
+                  <polygon data-v-21f5376e=""
+                    points="6.363636363636363,0.7070707070707071,2.121212121212121,14,12.727272727272727,5.515151515151515,0,5.515151515151515,10.606060606060606,14"
+                    fill="url(#eelzk)"></polygon>
+                </svg>
+                <svg data-v-21f5376e="" data-v-34cbeed1="" height="14" width="14" viewBox="0 0 14 14"
+                  class="vue-star-rating-star" step="10">
+                  <linearGradient data-v-21f5376e="" id="eelzk" x1="0" x2="100%" y1="0" y2="0">
+                    <stop data-v-21f5376e="" offset="100%" stop-color="#faad1d"></stop>
+                    <stop data-v-21f5376e="" offset="100%" stop-color="#d8d8d8"></stop>
+                  </linearGradient>
+                  <filter data-v-21f5376e="" id="ytfl3" height="130%" width="130%" filterUnits="userSpaceOnUse">
+                    <feGaussianBlur data-v-21f5376e="" stdDeviation="0" result="coloredBlur"></feGaussianBlur>
+                    <feMerge data-v-21f5376e="">
+                      <feMergeNode data-v-21f5376e="" in="coloredBlur"></feMergeNode>
+                      <feMergeNode data-v-21f5376e="" in="SourceGraphic"></feMergeNode>
+                    </feMerge>
+                  </filter>
+                  <polygon data-v-21f5376e=""
+                    points="6.363636363636363,0.7070707070707071,2.121212121212121,14,12.727272727272727,5.515151515151515,0,5.515151515151515,10.606060606060606,14"
+                    fill="url(#eelzk)" stroke="#fff" filter="url(#ytfl3)"></polygon>
+                  <polygon data-v-21f5376e=""
+                    points="6.363636363636363,0.7070707070707071,2.121212121212121,14,12.727272727272727,5.515151515151515,0,5.515151515151515,10.606060606060606,14"
+                    fill="url(#eelzk)" stroke="#999" stroke-width="0" stroke-linejoin="miter"></polygon>
+                  <polygon data-v-21f5376e=""
+                    points="6.363636363636363,0.7070707070707071,2.121212121212121,14,12.727272727272727,5.515151515151515,0,5.515151515151515,10.606060606060606,14"
+                    fill="url(#eelzk)"></polygon>
+                </svg>
+                <svg data-v-21f5376e="" data-v-34cbeed1="" height="14" width="14" viewBox="0 0 14 14"
+                  class="vue-star-rating-star" step="10">
+                  <linearGradient data-v-21f5376e="" id="eelzk" x1="0" x2="100%" y1="0" y2="0">
+                    <stop data-v-21f5376e="" offset="100%" stop-color="#faad1d"></stop>
+                    <stop data-v-21f5376e="" offset="100%" stop-color="#d8d8d8"></stop>
+                  </linearGradient>
+                  <filter data-v-21f5376e="" id="ytfl3" height="130%" width="130%" filterUnits="userSpaceOnUse">
+                    <feGaussianBlur data-v-21f5376e="" stdDeviation="0" result="coloredBlur"></feGaussianBlur>
+                    <feMerge data-v-21f5376e="">
+                      <feMergeNode data-v-21f5376e="" in="coloredBlur"></feMergeNode>
+                      <feMergeNode data-v-21f5376e="" in="SourceGraphic"></feMergeNode>
+                    </feMerge>
+                  </filter>
+                  <polygon data-v-21f5376e=""
+                    points="6.363636363636363,0.7070707070707071,2.121212121212121,14,12.727272727272727,5.515151515151515,0,5.515151515151515,10.606060606060606,14"
+                    fill="url(#eelzk)" stroke="#fff" filter="url(#ytfl3)"></polygon>
+                  <polygon data-v-21f5376e=""
+                    points="6.363636363636363,0.7070707070707071,2.121212121212121,14,12.727272727272727,5.515151515151515,0,5.515151515151515,10.606060606060606,14"
+                    fill="url(#eelzk)" stroke="#999" stroke-width="0" stroke-linejoin="miter"></polygon>
+                  <polygon data-v-21f5376e=""
+                    points="6.363636363636363,0.7070707070707071,2.121212121212121,14,12.727272727272727,5.515151515151515,0,5.515151515151515,10.606060606060606,14"
+                    fill="url(#eelzk)"></polygon>
+                </svg>
+
+              </span> 4.6 (17611)</h5>
+            <h3 class="rest-loc"><i class="fas fa-map-marker-alt"></i>39 El Hosary Square <a href="#">District 1,6th of
+                October</a></h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 px-4">
+        <div class="cover-btns float-right mt-5">
+          <button class="btn"><i class="fas fa-users"></i></button>
+          <button class="btn"><i class="fas fa-phone"></i></button>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!-- menu content -->
+    <div class="row py-3">
+      <div class="col-md-6">
+        <div class="menu-container">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link tabs " href="resturant.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link tabs active" href="resturantInfo.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link tabs" href="resturantList.html">Branches</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link tabs" href="resturantReview.html">Reviews</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="info-links">
+          <span class="h"><svg width="16px" height="19px" viewBox="0 0 16 19" version="1.1"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+              <title>Grey</title>
+              <desc>Created with Sketch.</desc>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="DiscoveryNew" transform="translate(-295.000000, -2451.000000)" fill="#4CAF50">
+                  <g id="cards/delivery/none-copy-3" transform="translate(20.000000, 2194.000000)">
+                    <g id="footer" transform="translate(0.000000, 227.000000)">
+                      <g id="icons/info/credit-card-copy" transform="translate(271.000000, 27.000000)">
+                        <path
+                          d="M17.6698967,8 L17.7151047,8.00978793 C17.836475,8.06068515 17.7503412,8.24861338 17.6524619,8.33866232 L17.6524619,8.33866232 L15.0880248,10.7347471 C14.9470786,10.8639478 14.8100476,11.1027732 14.9627393,11.2163132 C15.0801944,11.302447 15.2446316,11.2045677 15.3542564,11.1066884 C16.2508306,10.3275693 17.1474049,9.54453507 18.0439791,8.76541599 C18.134028,8.69102773 18.2593135,8.60880914 18.3571928,8.67536705 C18.4863934,8.76541599 18.384599,8.96508972 18.2749742,9.07471452 C17.4841096,9.88907015 16.6971602,10.6995106 15.9062956,11.5138662 C15.824077,11.6 15.7379432,11.6900489 15.710537,11.8035889 C15.6831308,11.9171289 15.7418584,12.058075 15.8553983,12.0815661 C15.9571928,12.1011419 16.0511569,12.0228385 16.1255451,11.9484502 C16.9751373,11.1262643 17.8286447,10.3040783 18.6782368,9.48189233 C18.795692,9.36835237 19.0227719,9.27047308 19.093245,9.41924959 C19.1323967,9.50929853 19.0658388,9.61109299 18.9992809,9.68548124 C18.2162466,10.5898858 17.4292972,11.4942904 16.6462629,12.3986949 C16.5444685,12.5161501 16.4387589,12.6923328 16.5405533,12.8097879 C16.6580084,12.9507341 16.877258,12.8137031 17.0025435,12.6805873 C17.8012385,11.8270799 18.6038486,10.9696574 19.4025435,10.1122349 C19.4651863,10.0417618 19.5552352,9.96737357 19.6452841,9.99477977 C19.6726903,10.0026101 19.6922662,10.0182708 19.7079269,10.0378467 C19.7744848,10.1278956 19.711842,10.3079935 19.6217931,10.4137031 C18.9170623,11.3298532 18.2005859,12.2342577 17.4723641,13.130832 C17.0847621,13.612398 16.6775843,14.0978793 16.1372907,14.3993475 C15.596997,14.6969005 14.8844358,14.7712887 14.3793788,14.4150082 L14.3793788,14.4150082 L12.8093951,16.125938 L16.305643,19.3324633 C16.9281553,19.9079935 17.0886773,20.788907 16.6149416,21.2587276 C16.145121,21.7285481 15.2642075,21.5719413 14.6886773,20.9455139 L14.6886773,20.9455139 L11.5369644,17.5119086 C10.6090688,18.5220228 9.68508838,19.532137 8.75719278,20.5422512 C8.44006391,20.8867863 8.10335918,21.2469821 7.66094482,21.4153344 C6.68998234,21.7833605 5.90694808,20.8280587 6.34936244,19.919739 C6.52946032,19.5556281 6.83484368,19.2737357 7.1323967,18.9996737 C8.17774743,18.0404568 9.21918299,17.0812398 10.2645337,16.1220228 L10.2645337,16.1220228 L8.74936244,14.4698206 C7.86061856,15.0101142 6.78394645,14.9631321 5.68378332,13.862969 C4.32130371,12.5004894 3.436475,10.0339315 4.41526782,9.05513866 C5.39406064,8.08026101 7.86061856,8.96117455 9.23875885,10.3158238 C10.3428372,11.4159869 10.385904,12.4926591 9.84952557,13.3814029 L9.84952557,13.3814029 L11.5526251,14.9435563 C12.1438159,14.4032626 12.7350068,13.8590538 13.3261977,13.314845 C13.059966,12.9233279 13.0756267,12.3869494 13.2596398,11.9484502 C13.4397376,11.5099511 13.768612,11.1497553 14.1014016,10.8091354 C15.1310916,9.75986949 16.2860672,8.8319739 17.5350068,8.05285481 C17.5898192,8.01761827 17.6563771,7.98238173 17.7151047,8.00978793 Z M12.1582382,3.71060359 C13.1057096,2.76313214 14.6522023,2.76313214 15.5996737,3.71060359 C16.54323,4.65807504 16.54323,6.2045677 15.5996737,7.15203915 L15.5996737,7.15203915 L13.3758564,9.37585644 C12.9021207,9.84959217 12.2756933,10.0845024 11.6531811,10.0845024 C11.0267537,10.0845024 10.4042414,9.84959217 9.93050571,9.37585644 L9.93050571,9.37585644 L7.71060359,7.15595432 C6.76313214,6.20848287 6.76313214,4.66199021 7.71060359,3.71451876 C8.65807504,2.76704731 10.2045677,2.76704731 11.1520392,3.71451876 L11.1520392,3.71451876 L11.6531811,4.21566069 Z"
+                          id="Grey"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg> Hygiene Checked</span>
+          <span>
+            <i class="fas fa-bicycle"></i>
+            90 mins</span>
+          <span><i class="fas fa-wallet"></i> 0 EGP</span>
+          <span><i class="far fa-clock"></i>08:00 AM - 03:00 AM</span>
+        </div>
+      </div>
+    </div>
+    <!-- branchs list/sidebar -->
+    <div class="row">
+      <div class="col-md-9 pt-3">
+        <h4 class="collection-title">About</h4>
+        <div class="jumbotron jEnfo">
+          <p class="info-3-value"><i class="fas fa-home"></i>19991</p>
+          <p class="info-3-value"><i class="fas fa-map-marker-alt"></i>39 El Hosary Square District 1, 6th of October <a
+              href="#">+73 BRANCHES</a></p>
+          <p class="info-3-value"><i class="far fa-clock"></i>Working Hours : 9:00 AM - 3:00 AM</p>
+        </div>
+        <h4 class="start-title"> <i class="fab fa-instagram"></i> Featured photos</h4>
+        <div class="card d-inline-block">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/sunday choco.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/choco milkshake.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/vanilla milkshake.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <div class="card d-inline-block">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/sunday choco.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/choco milkshake.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/vanilla milkshake.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <div class="card d-inline-block">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/sunday choco.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/choco milkshake.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/vanilla milkshake.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <div class="card d-inline-block">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/sunday choco.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/choco milkshake.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/vanilla milkshake.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <div class="card d-inline-block">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/sunday choco.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/choco milkshake.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/vanilla milkshake.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <h4 class="start-title"> <i class="fas fa-map-marker-alt"></i> Adrress</h4>
+        <p class="info-2-value">39 El Hosary Square District 1, 6th of October <a href="#">+73 BRANCHES</a></p>
+        <!--maps  -->
+      <div class="row">
+        <div class="col-md-12" style="height: 500px;">
+          <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55308.51457057811!2d30.89524010516549!3d29.95694393695512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145856f652aa1d33%3A0x993d7ec26e91b315!2sMcDonald&#39;s!5e0!3m2!1sen!2seg!4v1609458386360!5m2!1sen!2seg"
+          width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0"></iframe>
+        </div>
+      </div>
+        <h4 class="start-title">
+          <i class="far fa-clock"></i>
+          Working Hours
+        </h4>
+        <p class="info-2-value"> 9:00 AM - 3:00 AM </p>
+        <span class="text float-right">
+          <i class="far fa-check-circle"></i>
+          open now
+        </span>
+        <br> <br>
+        <div class="row py-4">
+          <div class="col-md-4">
+            <h4 class="start-title pl-4">
+              <i class="fas fa-bicycle"></i>
+              Delivery Area
+            </h4>
+            <span class="text  pl-4">
+              <i class="far fa-check-circle"></i>
+              Delevers to you
+            </span>
+          </div>
+          <div class="area float-right col-md-8">
+            <span class="area-icon"> SZ </span>
+            <p class="area-t">Shekh Zayed</p>
+            <span class="area-icon"> OC </span>
+            <p class="area-t">6 October</p>
+            <span class="area-icon"> OC </span>
+          </div>
+          <div class="clear-fix"></div>
+        </div>
+
+      </div>
+      <!-- sidebar -->
+      <div class="col-md-3 pt-3">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <div class="sv">
+              <svg id="delivery-icon" viewBox="0 0 35 35">
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="#e5533a"
+                  d="M16.954 5.998c-2.452 1.25-.503 4.423 1.676 3.367 2.307-1.12.603-4.528-1.676-3.367zm2.415 13.69l-5.411-1.92c-.223-.904-.019-1.99.179-3.039.06-.324.121-.645.168-.956.063-.415.112-.787.157-1.12.3-2.258.364-2.736 2.597-2.332 1.017.185 2.325 1.765 3.14 2.75.128.155.245.296.346.414.445-.087.926-.273 1.39-.452 1.25-.484 2.37-.918 2.291.785-.385.292-2.842 1.205-3.333 1.296-.994.183-1.413-.244-1.863-.702-.122-.124-.246-.25-.385-.368-.133-.113-.202-.179-.246-.22a.598.598 0 0 0-.074-.065c-.027-.017-.057-.03-.126-.056a9.735 9.735 0 0 1-.266-.108l-.435 3.076c.175.066.376.136.594.213 1.355.474 3.336 1.168 3.416 2.35.047.708-.93 4.582-1.146 5.292-2.118.425-2.045.119-1.59-1.805.176-.748.41-1.742.597-3.032zm5.177-.304l-1.367-4.271 1.168-.439.407.615c.677-.4 1.728-.333 1.94.605.182.798-.26 1.073-.717 1.356a3.311 3.311 0 0 0-.436.305c.107.19.17.37.228.534.108.306.197.559.508.73.118.066.318.12.57.187.87.233 2.356.63 3.203 2.254-.633.604-1.012.427-1.558.17a4.28 4.28 0 0 0-.907-.336c-2.646-.596-5.028.916-5.363 4.226l-.175.81-6.283-.007c-.4-.482-.77-1.041-1.143-1.605-.785-1.187-1.584-2.394-2.708-2.942-2.718-1.325-4.557.451-5.382 1.248-.173.166-.301.29-.384.334-.193-1.812.252-2.929 1.066-4.048a552.11 552.11 0 0 1 4.11-.004h.005l1.259.001c.354 0 .703-.014 1.043-.028 1.441-.059 2.698-.11 3.306.998-.202.382-1.357 1.205-1.897 1.465l1.598 3.594 4.252-.052c.917-2.987 1.604-3.85 3.657-5.7zM4.34 12.804c0 .431-.005.841-.01 1.237-.018 1.332-.033 2.513.164 3.9 1.08.37 7.158.425 8.098-.044.246-.806.213-2.728.189-4.133-.006-.365-.012-.695-.012-.96 0-1.075-.328-1.297-1.402-1.297H5.786c-1.142 0-1.446.131-1.446 1.296zm24.32 13.023c-.809 2.478-4.982 1.597-4.1-1.24.791-2.552 4.931-1.3 4.1 1.24zM25.53 21.9c-4.681 1.406-2.378 8.206 2.284 6.679 1.516-.497 2.957-2.338 2.234-4.467-.527-1.546-2.325-2.87-4.519-2.212zM9.494 23.25c2.778-.716 3.733 3.358 1.06 3.997-2.793.667-3.884-3.268-1.06-3.997zm-.482-1.415c-4.579 1.28-2.764 8.004 1.95 6.82 1.634-.41 3.044-2.19 2.573-4.26-.373-1.639-2.418-3.148-4.523-2.56z">
+                </path>
+              </svg>
+            </div>
+            <h2 class="card-title">Delivers to<span> District 3 6th of October</span></h2>
+            <button class="btn btn-address">Change Adress<i class="fas fa-arrow-right float-right"></i></button>
+          </div>
+        </div>
+      </div>
+                  <!-- footer -->
+                  <footer class="footer-main">
+                    <!-- container footer div -->
+                    <div class="container">
+    
+                        <!-- first footer row -->
+                        <div class="row">
+    
+                            <!-- Images col -->
+                            <div class="images-col col-sm-12 col-md-2 col-lg-2 footer-images">
+                                <div class="logo-img clickable-item">
+                                    <a href="/">
+                                        <img src="images/logo.svg" draggable="false" alt="elmenus"
+                                            style="margin-bottom: 20px; width: 125px;height: 29.5px;">
+                                    </a>
+                                </div>
+                                <a class="get-app" rel="noopener" target="_blank" href="https://app.adjust.com/vquym1x">
+                                    <img src="images/get-gplay.png" alt="Get Android app on Google Play"
+                                        style="width: 125px;height: 43.5px;">
+                                </a>
+                                <a class="get-app" rel="noopener" target="_blank" href="https://app.adjust.com/vquym1x">
+                                    <img src="images/get-appstore.png" alt="Get iPhone app on App Store"
+                                        style="width: 125px;height: 43.5px;">
+                                </a>
+                            </div>
+                            <!-- cities col -->
+                            <div class="cities-col col-sm-12 col-md-3 col-lg-3">
+                                <h4> Citeies
+    
+                                </h4>
+                                <ul class="footer-cities-list">
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35c4a83f-2224-11e8-924e-0242ac110011",null, null)'
+                                            href="/ain-sokhna/delivery">
+    
+                                            Ain Sokhna
+                                        </a>
+    
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("93a5d56b-a3a6-11e8-b2ca-0242ac110002",null, null)'
+                                            href="/al-fayoum/delivery">
+    
+                                            Al Fayoum
+                                        </a>
+    
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35c3ab7f-2224-11e8-924e-0242ac110011",null, null)'
+                                            href="/alexandria/delivery">
+    
+                                            Alexandria
+                                        </a>
+    
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("e7db58d2-5b94-11e9-b729-0a58646003b7",null, null)'
+                                            href="/asyut/delivery">
+    
+                                            Asyut
+                                        </a>
+    
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("e28dc0b1-3297-11e9-bd51-0a586460030a",null, null)'
+                                            href="/benha/delivery">
+    
+                                            Benha
+                                        </a>
+    
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("e29984a0-3297-11e9-bd51-0a586460030a",null, null)'
+                                            href="/beni-suef/delivery">
+    
+                                            Beni Suef
+                                        </a>
+    
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011",null, null)'
+                                            href="/cairo/delivery">
+    
+                                            Cairo
+                                        </a>
+    
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("93a5d4ab-a3a6-11e8-b2ca-0242ac110002",null, null)'
+                                            href="/dahab/delivery">
+    
+                                            Dahab
+                                        </a>
+    
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("e29d567e-3297-11e9-bd51-0a586460030a",null, null)'
+                                            href="/damanhour/delivery">
+    
+                                            Damanhour
+                                        </a>
+    
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("e2bf63da-3297-11e9-bd51-0a586460030a",null, null)'
+                                            href="/damietta/delivery">
+    
+                                            Damietta
+                                        </a>
+    
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35c3afc1-2224-11e8-924e-0242ac110011",null, null)'
+                                            href="/el-gouna/delivery">
+    
+                                            El Gouna
+                                        </a>
+    
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35c49f5c-2224-11e8-924e-0242ac110011",null, null)'
+                                            href="/el-mansoura/delivery">
+    
+                                            El Mansoura
+                                        </a>
+    
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35c4a628-2224-11e8-924e-0242ac110011",null, null)'
+                                            href="/hurghada/delivery">
+    
+                                            Hurghada
+                                        </a>
+    
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("e2a3dfc5-3297-11e9-bd51-0a586460030a",null, null)'
+                                            href="/ismailia/delivery">
+    
+                                            Ismailia
+                                        </a>
+    
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("e7c6bc68-5b94-11e9-b729-0a58646003b7",null, null)'
+                                            href="/kafr-el-sheikh/delivery">
+    
+                                            Kafr El Sheikh
+                                        </a>
+    
+                                    </li>
+    
+                                </ul>
+                            </div>
+    
+                            <!-- Areas col -->
+                            <div class="areas-col col-sm-12 col-md-4 col-lg-4">
+                                <h4>Areas </h4>
+                                <ul class="footer-cities-list">
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","3749204e-2224-11e8-924e-0242ac110011", null)'
+                                            href="/cairo/delivery/6th-of-october">
+                                            6th of October
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","3749633f-2224-11e8-924e-0242ac110011", null)'
+                                            href="/cairo/delivery/abbassiya">
+                                            Abbassiya
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37496602-2224-11e8-924e-0242ac110011", null)'
+                                            href="/cairo/delivery/agouza">
+                                            Agouza
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37497c45-2224-11e8-924e-0242ac110011", null)'
+                                            href="/cairo/delivery/al-katameya">
+                                            Al Katameya
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37495561-2224-11e8-924e-0242ac110011", null)'
+                                            href="/cairo/delivery/al-mokatam">
+                                            Al Mokatam
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37492e9c-2224-11e8-924e-0242ac110011", null)'
+                                            href="/cairo/delivery/al-rehab-city">
+                                            Al Rehab City
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","374932a6-2224-11e8-924e-0242ac110011", null)'
+                                            href="/cairo/delivery/alexandria-desert-road">
+                                            Alexandria Desert Road
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","374938a7-2224-11e8-924e-0242ac110011", null)'
+                                            href="/cairo/delivery/dokki">
+                                            Dokki
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37493b8a-2224-11e8-924e-0242ac110011", null)'
+                                            href="/cairo/delivery/downtown">
+                                            Downtown
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37496eb2-2224-11e8-924e-0242ac110011", null)'
+                                            href="/cairo/delivery/el-shorouk-city">
+                                            El Shorouk City
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37497177-2224-11e8-924e-0242ac110011", null)'
+                                            href="/cairo/delivery/faisal">
+                                            Faisal
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37493e4b-2224-11e8-924e-0242ac110011", null)'
+                                            href="/cairo/delivery/garden-city">
+                                            Garden City
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37494108-2224-11e8-924e-0242ac110011", null)'
+                                            href="/cairo/delivery/giza">
+                                            Giza
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","374be5be-2224-11e8-924e-0242ac110011", null)'
+                                            href="/cairo/delivery/hadayek-el-ahram">
+                                            Hadayek El Ahram
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37497425-2224-11e8-924e-0242ac110011", null)'
+                                            href="/cairo/delivery/hadayek-el-kobba">
+                                            Hadayek El Kobba
+                                        </a>
+                                    </li>
+    
+                                </ul>
+                            </div>
+    
+                            <!-- Dishes col -->
+                            <div class="dishes-col col-sm-12 col-md-3 col-lg-3">
+                                <h4>Dishes</h4>
+    
+                                <ul class="footer-cities-list">
+    
+                                    <li>
+                                        <a href="/cairo/delivery/maadi/dishes-grilled-chicken">
+                                            Grilled Chicken
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="/cairo/delivery/maadi/dishes-shawerma">
+                                            Shawerma
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="/cairo/delivery/maadi/dishes-burgers">
+                                            Burgers
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="/cairo/delivery/maadi/dishes-pizza">
+                                            Pizza
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="/cairo/delivery/maadi/dishes-fried-chicken">
+                                            Fried Chicken
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="/cairo/delivery/maadi/dishes-pasta">
+                                            Pasta
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="/cairo/delivery/maadi/dishes-grills">
+                                            Grills
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="/cairo/delivery/maadi/dishes-asian">
+                                            Asian
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="/cairo/delivery/maadi/dishes-healthy-food">
+                                            Healthy Food
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="/cairo/delivery/maadi/dishes-desserts">
+                                            Desserts
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="/cairo/delivery/maadi/dishes-breakfast">
+                                            Breakfast
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="/cairo/delivery/maadi/dishes-seafood">
+                                            Seafood
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="/cairo/delivery/maadi/dishes-sushi">
+                                            Sushi
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="/cairo/delivery/maadi/dishes-feteer">
+                                            Feteer
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="/cairo/delivery/maadi/dishes-koshary">
+                                            Koshary
+                                        </a>
+                                    </li>
+    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </footer>
+
+
+    </div>
+
+    <!-- js files -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/da9dec77a2.js" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

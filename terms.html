@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap tags -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/2e646d6873.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style-header.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body>
+    <!-- header Start -->
+
+    <!----------------1st nav------------------------------------>
+    <div class="container-fluid">
+        <div class="topnav" id="myTopnav" style="display: none;">
+            <ul>
+                <li><img src="../images/app icon.jpg" style="float: left;"><a href="#home" class="active"
+                        style="font-size: 34px;padding:0;padding-top: 10px;border-right: 1px solid gray;padding-right: 8px;">
+                        elmenus </a></li>
+            </ul>
+            <a href="Delivery-Page.html">Delivery</a>
+            <a href="DineOut-page.html">Dine Out</a>
+            <a href="giftmeals.html" class="gift"><i class="fas fa-gift"></i>Gift Meals</a>
+            <a href="#"><i class="fas fa-bell"></i>Notification</a>
+            <a href="myorderspast.html">My Orders</a>
+            <div class="dropdown2">
+                <button class="dropbtn" id="name_navbar"><i class="fas fa-user-friends"></i>
+                    <!--<i class="fa fa-caret-down"></i>-->
+                </button>
+                <div class="dropdown-content2">
+                    <a href="settings-Page.html">Account Settings</a>
+                    <a href="#">Log Out</a>
+                </div>
+            </div>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+            <a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;</a>
+
+        </div>
+        <!--------------------------------------------------->
+        <div class="topnav" id="myTopnav2">
+            <ul>
+                <li><img src="../images/app icon.jpg" style="float: left;"><a href="#" class="active"
+                        style="font-size: 34px;padding:0;padding-top: 10px;border-right: 1px solid gray;padding-right: 8px;">
+                        elmenus </a></li>
+            </ul>
+            <a href="Delivery-Page.html">Delivery</a>
+            <a href="DineOut-page.html">Dine Out</a>
+            <a href="giftmeals.html" class="gift2"><i class="fas fa-gift"></i>Gift Meals</a>
+            <a href="#" data-toggle="modal" data-target="#exampleModalCenter" class="login-nav">Login</a>
+            <a href="#" data-toggle="modal" data-target="#exampleModalCenter" class="signup-nav">Sign Up</a>
+            <a href="myorderspast.html" class="cart"><i style="font-size: 24px; " class="fas fa-shopping-cart"></i></a>
+            <a href="javascript:void(1);" style="font-size:25px;" class="icon" onclick="myFunction2()">&#9776;</a>
+
+        </div>
+    </div>
+
+    <!--------------- 2nd nav ---------------------->
+    <nav class=" navbar navbar-light bg-light">
+        <div class="input-container">
+            <input class="input-field" type="text" placeholder="Find a Restaurant">
+            <i class="fas fa-search"></i>
+        </div>
+
+    </nav>
+    <!----------------------- Start Modal----------------------------->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"><img class="img-fluid rounded-circle mx-auto d-block"
+                            style="width: 19%;float: left;" src="../images/app icon.jpg" alt="app icon">elmenus
+                    </h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div role="tabpanel">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist" style="margin-left: 15px;">
+                            <li role="presentation" id="login" class="active"><a href="#uploadTab"
+                                    aria-controls="uploadTab" role="tab" data-toggle="tab"
+                                    style="margin-right: 25px;font-size: 22px; font-weight: bold;">Login</a>
+
+                            </li>
+                            <li role="presentation" id="createaccount"><a style="font-size: 20px; font-weight: bold;"
+                                    href="#browseTab" aria-controls="browseTab" role="tab" data-toggle="tab">Create
+                                    Account</a>
+
+                            </li>
+                        </ul>
+                        <br>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="uploadTab">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="email"
+                                        style="font-size: 15px;height: 40px !important;" placeholder="email"
+                                        name="email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="pwd"
+                                        style="font-size: 15px; height: 40px !important;" placeholder="password"
+                                        name="pswd">
+                                </div>
+                                <button type="button" id="modal_login" class="btn btn-block"
+                                    style="background-color: #E5533A; color: white; font-size: 23px;">Login</button>
+                                <button type="button" class="btn btn-block"
+                                    style="background-color: #4267B2; color: white; font-size: 22px;">Continue With
+                                    FaceBook</button>
+                                <span style="font-size: 15px; margin-top: 10%; margin-left: 30%; color: #E5533A;">forget
+                                    password?</span>
+                            </div>
+                            <!--------------------------------------------->
+                            <div role="tabpanel" class="tab-pane" id="browseTab">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="username"
+                                        style="font-size: 15px; height: 40px !important;" placeholder="name"
+                                        name="email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="username2"
+                                        style="font-size: 15px; height: 40px !important;" placeholder="email"
+                                        name="email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="pwd2"
+                                        style="font-size: 15px; height: 40px !important;" placeholder="password"
+                                        name="pswd">
+                                </div>
+                                <button type="button" class="btn btn-block"
+                                    style="background-color: #E5533A; color: white; font-size: 22px;">Create
+                                    Account</button>
+                                <span style="font-size: 13px;text-align: center;color: rgb(207, 188, 188); ">By creating
+                                    an account, you
+                                    agree to our Terms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- header End -->
+
+    <div class="container-fluid about-us">
+        <div class="col-sm-12">
+            <h2>ELMENUS, SAE</h2>
+            <h2 class="text-center">TERMS OF USE</h2>
+            <p>PLEASE READ THESE TERMS OF USE CAREFULLY BEFORE USING THE SERVICES OFFERED BY ELMENUS ("ELMENUS"), AN
+                EGYPTIAN JOINT STOCK COMPANY. THESE TERMS OF USE SET FORTH THE LEGALLY BINDING TERMS AND CONDITIONS FOR
+                YOUR
+                USE OF THE ELMENUS MOBILE APP OR WEBSITE AT HTTP://WWW.ELMENUS.COM (THE "SITE") AND THE SERVICES,
+                FEATURES,
+                CONTENT, APPLICATIONS OFFERED BY ELMENUS (COLLECTIVELY WITH THE SITE, THE "SERVICE").</p>
+            <h3>
+                Acceptance of Terms.
+            </h3>
+            <p>By registering for and/or using the Service in any manner, including but not limited to visiting or
+                browsing the Site, you agree to all of the terms and conditions contained herein ("Terms of Use"), which
+                also incorporate Privacy Policy and all other operating rules, policies and procedures that may be
+                published from time to time on the Site by Elmenus, each of which is incorporated by reference and each
+                of which may be updated by Elmenus from time to time without notice to you. In addition, some services
+                offered through the Service may be subject to additional terms and conditions specified by Elmenus from
+                time to time; your use of such services is subject to those additional terms and conditions, which are
+                incorporated into these Terms of Use by this reference. These Terms of Use apply to all users of the
+                Service, including, without limitation, users who are contributors of content, information, and other
+                materials or services on the Site, individual users of the Service and restaurants that have a page on
+                the Service.</p>
+
+            <h3>Access.</h3>
+            <p>Subject to these Terms of Use, Elmenus may offer to provide the Services, as described more fully on the
+                Site, and which are selected by you, solely for your own use, and not for the use or benefit of any
+                third party. Services shall include, but not be limited to, any services Elmenus performs for you, any
+                applications offered by Elmenus that you download from the Site or, subject to the terms set out under
+                the "Third party Sites and Services" section below, from third party application stores (e.g., iTunes®
+                store, Blackberry App World™, or Google Apps Marketplace) authorized by Elmenus, as well as the offering
+                of any materials displayed or performed on or through the Services (including Content (as defined
+                below)).</p>
+
+            <h3>Registration and Eligibility.</h3>
+            <p>You may browse the Site and view Content without registering, but as a condition to using certain aspects
+                of the Service, you are required to register with Elmenus and represent, warrant and covenant that you
+                provide Elmenus with accurate and complete registration information (including, but not limited to a
+                user name ("User Name"), e-mail address and a password you will use to access the Service) and to keep
+                your registration information accurate and up-to-date. Failure to do so shall constitute a breach of
+                these Terms of Use, which may result in immediate termination of your Elmenus account. We recommend, but
+                do not require, that you use your own name as your User Name so your friends can recognize you more
+                easily.</p>
+            <h3>You shall not:</h3>
+            <p>-create any account for anyone other than yourself without such person's permission;
+                use a User Name that is the name of another person with the intent to impersonate that person;
+                use a User Name or Elmenus account that is subject to any rights of a person other than you without
+                appropriate authorization; or
+                use a User Name that is a name that is otherwise offensive, vulgar or obscene or otherwise unlawful.
+                Elmenus reserves the right to refuse registration of, or cancel a User Name in its sole discretion. You
+                are solely responsible and liable for activity that occurs on your account and shall be responsible for
+                maintaining the confidentiality of your Elmenus password. You shall never use another user's account
+                without such other user's prior express permission. You will immediately notify Elmenus in writing of
+                any unauthorized use of your account, or other account related security breach of which you are aware.
+
+                You represent and warrant that if you are an individual, you are of legal age to form a binding
+                contract, or that if you are registering on behalf of an entity, that you are authorized to enter into,
+                and bind the entity to, these Terms of Use and register for the Service. The Service is not available to
+                individuals who are younger than 13 years old. Elmenus may, in its sole discretion, refuse to offer the
+                Service to any person or entity and change its eligibility criteria at any time. You are solely
+                responsible for ensuring that these Terms of Use are in compliance with all laws, rules and regulations
+                applicable to you and the right to access the Service is revoked where these Terms of Use or use of the
+                Service is prohibited and, in such circumstances, you agree not to use or access the Site or Services in
+                any way.</p>
+        </div>
+
+    </div>
+
+
+    <!-- footer -->
+    <footer class="footer-main">
+        <!-- container footer div -->
+        <div class="container">
+
+            <!-- first footer row -->
+            <div class="row">
+
+                <!-- Images col -->
+                <div class="images-col col-sm-12 col-md-2 col-lg-2 footer-images">
+                    <div class="logo-img clickable-item">
+                        <a href="/">
+                            <img src="../images/logo.svg" draggable="false" alt="elmenus"
+                                style="margin-bottom: 20px; width: 125px;height: 29.5px;">
+                        </a>
+                    </div>
+                    <a class="get-app" rel="noopener" target="_blank" href="https://app.adjust.com/vquym1x">
+                        <img src="../images/get-gplay.png" alt="Get Android app on Google Play"
+                            style="width: 125px;height: 43.5px;">
+                    </a>
+                    <a class="get-app" rel="noopener" target="_blank" href="https://app.adjust.com/vquym1x">
+                        <img src="../images/get-appstore.png" alt="Get iPhone app on App Store"
+                            style="width: 125px;height: 43.5px;">
+                    </a>
+                </div>
+
+                <!-- cities col -->
+                <div class="cities-col col-sm-12 col-md-3 col-lg-3">
+                    <h4> Citeies
+
+                    </h4>
+                    <ul class="footer-cities-list">
+
+                        <li>
+                            <a @click='setUserLocationCookies("35c4a83f-2224-11e8-924e-0242ac110011",null, null)'
+                                href="/ain-sokhna/delivery">
+
+                                Ain Sokhna
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("93a5d56b-a3a6-11e8-b2ca-0242ac110002",null, null)'
+                                href="/al-fayoum/delivery">
+
+                                Al Fayoum
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35c3ab7f-2224-11e8-924e-0242ac110011",null, null)'
+                                href="/alexandria/delivery">
+
+                                Alexandria
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("e7db58d2-5b94-11e9-b729-0a58646003b7",null, null)'
+                                href="/asyut/delivery">
+
+                                Asyut
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("e28dc0b1-3297-11e9-bd51-0a586460030a",null, null)'
+                                href="/benha/delivery">
+
+                                Benha
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("e29984a0-3297-11e9-bd51-0a586460030a",null, null)'
+                                href="/beni-suef/delivery">
+
+                                Beni Suef
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011",null, null)'
+                                href="/cairo/delivery">
+
+                                Cairo
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("93a5d4ab-a3a6-11e8-b2ca-0242ac110002",null, null)'
+                                href="/dahab/delivery">
+
+                                Dahab
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("e29d567e-3297-11e9-bd51-0a586460030a",null, null)'
+                                href="/damanhour/delivery">
+
+                                Damanhour
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("e2bf63da-3297-11e9-bd51-0a586460030a",null, null)'
+                                href="/damietta/delivery">
+
+                                Damietta
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35c3afc1-2224-11e8-924e-0242ac110011",null, null)'
+                                href="/el-gouna/delivery">
+
+                                El Gouna
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35c49f5c-2224-11e8-924e-0242ac110011",null, null)'
+                                href="/el-mansoura/delivery">
+
+                                El Mansoura
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35c4a628-2224-11e8-924e-0242ac110011",null, null)'
+                                href="/hurghada/delivery">
+
+                                Hurghada
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("e2a3dfc5-3297-11e9-bd51-0a586460030a",null, null)'
+                                href="/ismailia/delivery">
+
+                                Ismailia
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("e7c6bc68-5b94-11e9-b729-0a58646003b7",null, null)'
+                                href="/kafr-el-sheikh/delivery">
+
+                                Kafr El Sheikh
+                            </a>
+
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Areas col -->
+                <div class="areas-col col-sm-12 col-md-4 col-lg-4">
+                    <h4>Areas </h4>
+                    <ul class="footer-cities-list">
+
+                        <li>
+                            <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","3749204e-2224-11e8-924e-0242ac110011", null)'
+                                href="/cairo/delivery/6th-of-october">
+                                6th of October
+                            </a>
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","3749633f-2224-11e8-924e-0242ac110011", null)'
+                                href="/cairo/delivery/abbassiya">
+                                Abbassiya
+                            </a>
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37496602-2224-11e8-924e-0242ac110011", null)'
+                                href="/cairo/delivery/agouza">
+                                Agouza
+                            </a>
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37497c45-2224-11e8-924e-0242ac110011", null)'
+                                href="/cairo/delivery/al-katameya">
+                                Al Katameya
+                            </a>
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37495561-2224-11e8-924e-0242ac110011", null)'
+                                href="/cairo/delivery/al-mokatam">
+                                Al Mokatam
+                            </a>
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37492e9c-2224-11e8-924e-0242ac110011", null)'
+                                href="/cairo/delivery/al-rehab-city">
+                                Al Rehab City
+                            </a>
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","374932a6-2224-11e8-924e-0242ac110011", null)'
+                                href="/cairo/delivery/alexandria-desert-road">
+                                Alexandria Desert Road
+                            </a>
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","374938a7-2224-11e8-924e-0242ac110011", null)'
+                                href="/cairo/delivery/dokki">
+                                Dokki
+                            </a>
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37493b8a-2224-11e8-924e-0242ac110011", null)'
+                                href="/cairo/delivery/downtown">
+                                Downtown
+                            </a>
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37496eb2-2224-11e8-924e-0242ac110011", null)'
+                                href="/cairo/delivery/el-shorouk-city">
+                                El Shorouk City
+                            </a>
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37497177-2224-11e8-924e-0242ac110011", null)'
+                                href="/cairo/delivery/faisal">
+                                Faisal
+                            </a>
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37493e4b-2224-11e8-924e-0242ac110011", null)'
+                                href="/cairo/delivery/garden-city">
+                                Garden City
+                            </a>
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37494108-2224-11e8-924e-0242ac110011", null)'
+                                href="/cairo/delivery/giza">
+                                Giza
+                            </a>
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","374be5be-2224-11e8-924e-0242ac110011", null)'
+                                href="/cairo/delivery/hadayek-el-ahram">
+                                Hadayek El Ahram
+                            </a>
+                        </li>
+
+                        <li>
+                            <a @click='setUserLocationCookies("35185821-2224-11e8-924e-0242ac110011","37497425-2224-11e8-924e-0242ac110011", null)'
+                                href="/cairo/delivery/hadayek-el-kobba">
+                                Hadayek El Kobba
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Dishes col -->
+                <div class="dishes-col col-sm-12 col-md-3 col-lg-3">
+                    <h4>Dishes</h4>
+
+                    <ul class="footer-cities-list">
+
+                        <li>
+                            <a href="/cairo/delivery/maadi/dishes-grilled-chicken">
+                                Grilled Chicken
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/cairo/delivery/maadi/dishes-shawerma">
+                                Shawerma
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/cairo/delivery/maadi/dishes-burgers">
+                                Burgers
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/cairo/delivery/maadi/dishes-pizza">
+                                Pizza
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/cairo/delivery/maadi/dishes-fried-chicken">
+                                Fried Chicken
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/cairo/delivery/maadi/dishes-pasta">
+                                Pasta
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/cairo/delivery/maadi/dishes-grills">
+                                Grills
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/cairo/delivery/maadi/dishes-asian">
+                                Asian
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/cairo/delivery/maadi/dishes-healthy-food">
+                                Healthy Food
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/cairo/delivery/maadi/dishes-desserts">
+                                Desserts
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/cairo/delivery/maadi/dishes-breakfast">
+                                Breakfast
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/cairo/delivery/maadi/dishes-seafood">
+                                Seafood
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/cairo/delivery/maadi/dishes-sushi">
+                                Sushi
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/cairo/delivery/maadi/dishes-feteer">
+                                Feteer
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/cairo/delivery/maadi/dishes-koshary">
+                                Koshary
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <!-- second footer row -->
+        <div class="row">
+
+            <!-- social -->
+            <div class="col-sm-12 col-lg-3" style="text-align: center;">
+                <a href="#"><i class="fab fa-facebook-square fa-lg social-link"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-lg social-link"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-lg social-link"></i></a>
+                <a href="#"><i class="fab fa-linkedin fa-lg social-link"></i></a>
+            </div>
+
+            <!-- more links -->
+            <div class="col-sm-12 col-lg-6 more-links">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-2 list-item"><a href="#">About</a></div>
+                        <div class="col-5 list-item"><a href="#">Terms and Conditions</a></div>
+                        <div class="col-3 list-item"><a href="#">Privacy</a></div>
+                        <div class="col-2 list-item"><a href="#">Careers</a></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- copy right -->
+            <div class="col-sm-12 col-lg-3" style="text-align: center;">
+                <h6>© 2020 elmenus</h6>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+nav {
+    background-color: white;
+    border-bottom: 1px solid #b1aaaa;
+    font-size: 10pt;
+  }
+  nav a {
+    color: black;
+    height: 100%;
+  }
+  nav a img {
+    width: 25%;
+    float: left;
+    padding-top: 3px;
+  }
+  
+  .nav-item-c {
+    height: 40px;
+    padding: 0px;
+    width: 70px;
+    line-height: 25px;
+    padding-left: 6px;
+  }
+  
+  .nav-item-c:hover {
+    background-color: #E5533A;
+    color: white !important;
+  }
+  
+  .fas {
+    margin-right: 3px;
+  }
+  
+  .fa-shopping-cart {
+    margin-left: 17px;
+    font-size: 12pt;
+    color: #E5533A;
+  }
+  
+  .active a {
+    color: #E5533A;
+  }
+  
+  /*@media (min-width:530px)
+  {
+      .modal{
+      margin-left: 35%;
+      }
+  }*/
+  .modal-dialog {
+    width: 250px !important;
+  }
+  
+  #btn_login {
+    height: 22px !important;
+    margin-top: 9px !important;
+    padding: 0 !important;
+    width: 60px !important;
+    font-size: 8pt !important;
+    background-color: white !important;
+    margin-right: 6px !important;
+  }
+  
+  #btn_signup {
+    height: 22px !important;
+    margin-top: 9px !important;
+    padding: 0 !important;
+    width: 60px !important;
+    font-size: 8pt !important;
+    background-color: #E5533A !important;
+    color: white;
+  }
+  
+  #secondnav {
+    width: 45% !important;
+  }
+  #secondnav a {
+    width: 140px;
+  }
+  
+  .sec_nav {
+    position: absolute;
+    left: 55%;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  
+  @media (max-width: 500px) {
+    .sec_nav {
+      flex-direction: column;
+    }
+  
+    #secondnav {
+      width: 30% !important;
+    }
+    #secondnav a {
+      width: 90px;
+    }
+  }
+  .btn_settings {
+    border: none;
+    border-radius: 15px;
+    font-size: 3pt;
+    padding: 5px;
+    font-weight: bold;
+    background-color: white;
+  }
+  .btn_settings a {
+    color: gray;
+  }
+  
+  .active_btn {
+    background-color: #E5533A;
+  }
+  .active_btn a {
+    color: white;
+  }
+  
+  .main_setting_btn {
+    background-color: #E5533A;
+    color: white;
+    border: none;
+    padding: 7px;
+    width: 120px;
+    font-size: 9pt;
+    margin-top: 45px;
+  }
+  
+  label {
+    font-size: 5pt;
+    margin-bottom: 0px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  @media (max-width: 520px) {
+    .form-group {
+      width: 90% !important;
+      margin-left: 20px !important;
+    }
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 2px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #EBE4F8;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(11px);
+    -ms-transform: translateX(11px);
+    transform: translateX(11px);
+    background-color: #4CAF50;
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  .input-container {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    width: 500px;
+    border: 1px solid none;
+    box-shadow: 1px 1px 2px 2px #c0b9b9;
+  }
+  
+  .fa-search {
+    padding-top: 4px;
+    background: white;
+    color: #ada4a4;
+    min-width: 50px;
+    text-align: center;
+  }
+  
+  .input-field {
+    width: 100%;
+    border: none;
+  }
+  
+  @media (max-width: 495px) {
+    .right-delivery {
+      display: none;
+    }
+  
+    /*.input-container
+    {
+        width: 500px;
+    }*/
+  }
+  .gray-col {
+    color: gray;
+  }
+  
+  .paragraph {
+    font-size: 6pt;
+    color: gray;
+  }
+  
+  .fa-star {
+    color: #D9DBDB;
+  }
+  
+  /*# sourceMappingURL=style.css.map */
+  @media(max-width:530px)
+  {
+     .sec_nav
+     {
+       display:none;
+     }
+  }
